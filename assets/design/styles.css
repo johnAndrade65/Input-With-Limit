@@ -1,0 +1,73 @@
+/*-==FONT IMPORT==-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/*-==GENERAL STYLIZATION==-*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/*-==BODY==-*/
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #33ff00 0%, #00aa17 100%);
+}
+/*-==CONTAINER==-*/
+.wrapper{
+    background: #fff;
+    padding: 20px;
+    width: 450px;
+    border-radius: 3px;
+}
+/*-==FORM==-*/
+.wrapper form{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+form input{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 0 50px 0 45px;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    outline: none;
+}
+form input:focus,
+form input:valid{
+    border-color: #00a516;
+}
+form input:valid ~ .counter{
+    color: #3cff00;
+    border-color: #3cff00;
+}
+form label{
+    position: absolute;
+    width: 55px;
+    text-align: center;
+    font-size: 23px;
+    color: #3cff00;
+    pointer-events: none;
+}
+form input::placeholder{
+    color: #c4c4c4;
+}
+form .counter{
+    position: absolute;
+    right: 3px;
+    width: 55px;
+    text-align: center;
+    font-size: 23px;
+    color: #c4c4c4;
+    pointer-events: none;
+    border-left: 1px solid #c4c4c4;
+}
